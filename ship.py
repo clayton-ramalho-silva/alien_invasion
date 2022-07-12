@@ -13,11 +13,14 @@ class Ship():
 
         #flag movimento
         self.moving_right = False
+        self.moving_left = False
     
     # Atualiza posição da espaconave de acordo com a flag de movimento
     def update(self):
         if self.moving_right:
             self.rect.centerx += 1
+        if self.moving_left:
+            self.rect.centerx -= 1
 
 
     # Desenha a espaçonave na sua posição atual
